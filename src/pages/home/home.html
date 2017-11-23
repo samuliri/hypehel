@@ -16,7 +16,7 @@
       </mat-card-header>
       <img mat-card-image src="{{ article.fields.hero.fields.file.url }}">
       <mat-card-actions class="u-marginTopAuto">
-        <!--a mat-button [routerLink]="['/products', product.fields.slug]">View details</a-->
+        <button ion-item (click)="itemTapped($event, article)"> Read more </button>
       </mat-card-actions>
     </mat-card>
   </li>
