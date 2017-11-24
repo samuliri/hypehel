@@ -48,3 +48,16 @@
     opacity: 0;
   }
 }
+
+@font-face {
+font-family: Imogen Agnes;
+  src: url('../assets/fonts/imogen_agnes-webfont.woff2') format('woff2');
+}
+
+strong {
+  font-family: 'Imogen Agnes','Skatta Sans',Arial,sans-serif;
+  font-weight: 400;
+  letter-spacing: .05rem;
+  line-height: .5;
+  font-size: 10rem;
+}
