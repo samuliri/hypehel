@@ -28,10 +28,37 @@ page-home {
     max-width: 37.5em;
   }
 
+  .article {
+    transition: 0.4s;
+      &:hover {
+        background-color: #F9F9F9;
+        margin: -10px -10px;
+      }
+  }
+
   .article-card {
     height: 100%;
     display: flex;
     flex-direction: column;
+    cursor: pointer;
+    .mat-card-header-text{
+      margin: 10px auto;
+    }
+    .mat-card-subtitle {
+      text-align: center;
+    }
+    .mat-card-actions {
+      .item {
+      background-color: transparent;
+        .item-inner {
+          border-bottom: none;
+          .label {
+            text-align: center;
+            color: #AF9B62;
+          }
+        }
+      }
+    }
   }
-  
+
 }
