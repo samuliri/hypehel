@@ -15,7 +15,7 @@ export class HomePage implements OnInit {
   constructor(public navCtrl: NavController, public navParams: NavParams, private contentfulService: ContentfulService) { }
 
   ngOnInit() {
-    this.contentfulService.getArticles()
+    this.contentfulService.getArticles(({'fields.category.sys.id': '6IAjPoV7JCOKsgSwoiaiOC'}))
     .then(articles => this.articles = articles)
   }
 
