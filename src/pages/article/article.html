@@ -10,9 +10,23 @@
   <mat-card class="article-card">
     <mat-card-header>
       <mat-card-title><strong>{{ selectedArticle.fields.heading }}</strong></mat-card-title>
-      <mat-card-subtitle>{{ selectedArticle.fields.body }}</mat-card-subtitle>
-      <mat-card-subtitle><a mat-button>{{ selectedArticle.fields.category.fields.name }}</a></mat-card-subtitle>
+      <mat-card-subtitle>{{ selectedArticle.fields.category.fields.name }}</mat-card-subtitle>
     </mat-card-header>
-    <img src="{{ selectedArticle.fields.hero.fields.file.url }}">
+    <mat-card-content>
+      <div>{{ selectedArticle.fields.body }}</div>
+      <img src="{{ selectedArticle.fields.hero.fields.file.url }}">
+    </mat-card-content>
+    <mat-card-footer>
+      <span *ngIf="selectedArticle.fields.instagram;">
+        <a href="https://www.instagram.com/{{ selectedArticle.fields.instagram }}">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+      </span>
+      <span *ngIf="selectedArticle.fields.location;">
+        <a href="https://maps.google.com/maps?q=@{{ selectedArticle.fields.location.lat }},{{ selectedArticle.fields.location.lon }}">
+          <ion-icon name="navigate"></ion-icon>
+        </a>
+      </span>
+    </mat-card-footer>
   </mat-card>
 </ion-content>
