@@ -11,13 +11,24 @@ import { ArticlePage } from '../article/article';
 })
 export class HomePage implements OnInit {
   articles: Entry<any>[];
+  tabTitle: any;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private contentfulService: ContentfulService) { }
+  constructor(public navCtrl: NavController, public navParams: NavParams, private contentfulService: ContentfulService) {
+    this.tabTitle = navCtrl['tabTitle'];
+  }
 
   ngOnInit() {
-    //this.contentfulService.getArticles(({'fields.category.sys.id': '6IAjPoV7JCOKsgSwoiaiOC'}))
-    this.contentfulService.getArticles()
-    .then(articles => this.articles = articles)
+    // console.log(this.tabTitle);
+    if (this.tabTitle == "All") {
+      this.contentfulService.getArticles()
+      .then(articles => this.articles = articles)
+    } else if (this.tabTitle == "Eat") {
+      this.contentfulService.getArticles(({'fields.category.sys.id': '6IAjPoV7JCOKsgSwoiaiOC'}))
+      .then(articles => this.articles = articles)
+    } else if (this.tabTitle == "Shop") {
+      this.contentfulService.getArticles(({'fields.category.sys.id': '4kc5Zgva48sMwiAKMiqkqi'}))
+      .then(articles => this.articles = articles)
+    }
   }
 
   itemTapped(event, item) {
