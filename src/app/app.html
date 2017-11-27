@@ -1,11 +1,11 @@
-<ion-menu [content]="content">
+<ion-menu type="overlay" [content]="content">
   <ion-header>
     <ion-toolbar>
-      <ion-title><ion-icon name="close" class="close-btn" menuClose></ion-icon></ion-title>
+      <ion-icon name="close" class="close-btn" menuClose></ion-icon>
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
+  <ion-content class="no-scroll">
     <ion-list>
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}

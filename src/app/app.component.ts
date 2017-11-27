@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { TabsPage } from '../pages/tabs/tabs';
 import { AboutPage } from '../pages/about/about';
+import { ContactPage } from '../pages/contact/contact';
 
 @Component({
   templateUrl: 'app.html'
@@ -13,7 +14,7 @@ export class HypeHEL {
   @ViewChild(Nav) nav: Nav;
 
   rootPage:any = TabsPage;
-  
+
   pages: Array<{title: string, component: any}>;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
@@ -26,8 +27,9 @@ export class HypeHEL {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: TabsPage },
-      { title: 'About', component: AboutPage }
+      { title: '🔥 Home', component: TabsPage },
+      { title: '💯 About', component: AboutPage },
+      { title: '🔫 Contact', component: ContactPage }
     ];
   }
 

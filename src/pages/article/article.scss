@@ -2,4 +2,40 @@ page-article {
   a {
     color: black;
   }
+
+  .map-btn {
+    min-width: 44px;
+    padding: 0 5px;
+    margin: 0 6px;
+    &:hover {
+      opacity: .7;
+    }
+    a {
+      color: rgba(60, 60, 60, 0.7);
+      text-decoration: none;
+      &:hover {
+        opacity: 1 !important;
+      }
+    }
+    .icon {
+      font-size: 2.4rem;
+    }
+    &__text {
+      padding-top: 4px;
+      color: rgba(60, 60, 60, 0.7);
+    }
+  }
+
+  .article-card {
+    text-align: center;
+    box-shadow: none !important;
+    margin-top: 16px;
+    .mat-card-header-text {
+      margin: auto;
+    }
+    .body {
+      margin: 16px auto;
+      max-width: 400px;
+    }
+  }
 }

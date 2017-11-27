@@ -2,6 +2,14 @@
   <ion-navbar>
     <ion-title>
     </ion-title>
+    <ion-buttons end>
+    <button class="map-btn bar-button-default-md" *ngIf="selectedArticle.fields.location;">
+      <a href="https://maps.google.com/maps?q=@{{ selectedArticle.fields.location.lat }},{{ selectedArticle.fields.location.lon }}">
+        <ion-icon name="navigate"></ion-icon>
+        <div class="map-btn__text">Map</div>
+      </a>
+    </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -10,22 +18,18 @@
     <mat-card-header>
       <mat-card-title><strong>{{ selectedArticle.fields.heading }}</strong></mat-card-title>
       <mat-card-subtitle>{{ selectedArticle.fields.category.fields.name }}</mat-card-subtitle>
+      <mat-card-subtitle>{{ selectedArticle.fields.ingress }}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <div>{{ selectedArticle.fields.body }}</div>
       <img src="{{ selectedArticle.fields.hero.fields.file.url }}">
+      <div class="body">{{ selectedArticle.fields.body }}</div>
     </mat-card-content>
     <mat-card-footer>
-      <span *ngIf="selectedArticle.fields.instagram;">
+      <!--span *ngIf="selectedArticle.fields.instagram;">
         <a href="https://www.instagram.com/{{ selectedArticle.fields.instagram }}">
           <ion-icon name="logo-instagram"></ion-icon>
         </a>
-      </span>
-      <span *ngIf="selectedArticle.fields.location;">
-        <a href="https://maps.google.com/maps?q=@{{ selectedArticle.fields.location.lat }},{{ selectedArticle.fields.location.lon }}">
-          <ion-icon name="navigate"></ion-icon>
-        </a>
-      </span>
+      </span-->
     </mat-card-footer>
   </mat-card>
 </ion-content>
