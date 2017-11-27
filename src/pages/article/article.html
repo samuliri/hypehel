@@ -3,12 +3,12 @@
     <ion-title>
     </ion-title>
     <ion-buttons end>
-    <button class="map-btn bar-button-default-md" *ngIf="selectedArticle.fields.location;">
-      <a href="https://maps.google.com/maps?q=@{{ selectedArticle.fields.location.lat }},{{ selectedArticle.fields.location.lon }}">
-        <ion-icon name="navigate"></ion-icon>
-        <div class="map-btn__text">Map</div>
-      </a>
-    </button>
+      <button class="map-btn bar-button-default-md" *ngIf="selectedArticle.fields.location;">
+        <a href="https://maps.google.com/maps?q=@{{ selectedArticle.fields.location.lat }},{{ selectedArticle.fields.location.lon }}">
+          <ion-icon name="navigate"></ion-icon>
+          <div class="map-btn__text">Map</div>
+        </a>
+      </button>
     </ion-buttons>
   </ion-navbar>
 </ion-header>
