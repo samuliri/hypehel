@@ -29,9 +29,14 @@ page-article {
   .article-card {
     text-align: center;
     box-shadow: none !important;
-    margin-top: 16px;
+    margin: 16px auto;
+    padding: 24px 0;
+    max-width: 500px;
     .mat-card-header-text {
       margin: auto;
+      .mat-card-title {
+        margin-bottom: 32px;
+      }
     }
     .body {
       margin: 16px auto;

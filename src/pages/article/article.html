@@ -25,11 +25,14 @@
       <div class="body">{{ selectedArticle.fields.body }}</div>
     </mat-card-content>
     <mat-card-footer>
+      <div class="body">{{ selectedArticle.fields.hours }}</div>
       <!--span *ngIf="selectedArticle.fields.instagram;">
         <a href="https://www.instagram.com/{{ selectedArticle.fields.instagram }}">
           <ion-icon name="logo-instagram"></ion-icon>
         </a>
       </span-->
+      <div class="body"><a href="https://www.instagram.com/{{ selectedArticle.fields.instagram }}">@{{ selectedArticle.fields.instagram }}</a></div>
+      <a href="{{ selectedArticle.fields.website }}">{{ selectedArticle.fields.website }}</a>
     </mat-card-footer>
   </mat-card>
 </ion-content>

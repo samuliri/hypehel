@@ -14,7 +14,7 @@ page-home {
     margin: auto;
     padding: 0;
     list-style-type: none;
-    max-width: 300px;
+    max-width: 400px;
     img {
       margin: auto;
     }
@@ -32,7 +32,7 @@ page-home {
     transition: 0.4s;
       &:hover {
         background-color: #F9F9F9;
-        margin: 0 -10px;
+        margin: -5px;
       }
   }
 
@@ -43,6 +43,10 @@ page-home {
     cursor: pointer;
     .mat-card-header-text{
       margin: 10px auto;
+      text-align: center;
+      .mat-card-title {
+        margin-bottom: 32px;
+      }
     }
     .mat-card-subtitle {
       text-align: center;

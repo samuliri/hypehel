@@ -80,12 +80,13 @@ font-family: Imogen Agnes Swash;
 
 .bar-button-menutoggle {
   color: #AF9B62;
+  margin-right: 10px !important;
 }
 
 .close-btn {
   cursor: pointer;
   float: right;
-  margin: 0 10px;
+  margin-right: 20px;
   font-size: 2.5rem;
   color: #AF9B62;
   &:hover {
@@ -94,7 +95,7 @@ font-family: Imogen Agnes Swash;
 }
 
 .ion-ios-close {
-  margin: 0 15px;
+  margin-right: 20px;
   font-size: 4rem;
 }
 
