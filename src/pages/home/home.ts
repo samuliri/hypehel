@@ -28,6 +28,15 @@ export class HomePage implements OnInit {
     } else if (this.tabTitle == "Shop") {
       this.contentfulService.getArticles(({'fields.category.sys.id': '4kc5Zgva48sMwiAKMiqkqi'}))
       .then(articles => this.articles = articles)
+    } else if (this.tabTitle == "Chill") {
+      this.contentfulService.getArticles(({'fields.category.sys.id': '4sncedgSu4yU2umi00U6mO'}))
+      .then(articles => this.articles = articles)
+    } else if (this.tabTitle == "Club") {
+      this.contentfulService.getArticles(({'fields.category.sys.id': 'WkZ3h2GKsgAG8SU44aSYM'}))
+      .then(articles => this.articles = articles)
+    } else if (this.tabTitle == "Art") {
+      this.contentfulService.getArticles(({'fields.category.sys.id': '25myJzzEPyEeUckoeoWsYQ'}))
+      .then(articles => this.articles = articles)
     }
   }
 
