@@ -21,7 +21,7 @@
       <mat-card-subtitle Markdown>{{ selectedArticle.fields.ingress }}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <img src="{{ selectedArticle.fields.hero.fields.file.url }}">
+      <img *ngIf="selectedArticle.fields.hero" src="{{ selectedArticle.fields.hero.fields.file.url }}">
       <div class="body" Markdown>{{ selectedArticle.fields.body }}</div>
     </mat-card-content>
     <mat-card-footer>
