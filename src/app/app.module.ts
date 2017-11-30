@@ -14,6 +14,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { ContentfulService } from '../services/contentful.service';
+import { MarkdownModule } from 'angular2-markdown';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { ContentfulService } from '../services/contentful.service';
   imports: [
     BrowserModule,
     IonicModule.forRoot(HypeHEL),
+    MarkdownModule.forRoot(),
     MatCardModule
   ],
   bootstrap: [IonicApp],
