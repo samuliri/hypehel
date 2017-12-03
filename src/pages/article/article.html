@@ -18,7 +18,7 @@
     <mat-card-header>
       <mat-card-title class="swag">{{ selectedArticle.fields.heading }}</mat-card-title>
       <mat-card-subtitle>{{ selectedArticle.fields.category.fields.name }}</mat-card-subtitle>
-      <mat-card-subtitle Markdown>{{ selectedArticle.fields.ingress }}</mat-card-subtitle>
+      <mat-card-subtitle class="body" Markdown>{{ selectedArticle.fields.ingress }}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
       <img *ngIf="selectedArticle.fields.hero" src="{{ selectedArticle.fields.hero.fields.file.url }}">
