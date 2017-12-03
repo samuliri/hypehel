@@ -52,7 +52,7 @@
 
 @font-face {
 font-family: Imogen Agnes;
-  src: url('../assets/fonts/imogen_agnes-webfont.woff2') format('woff2');
+  src: url('../assets/fonts/imogen_agnes-webfont.woff2') format('woff2'), url('../assets/fonts/imogen_agnes-webfont.woff') format('woff'), url('../assets/fonts/imogen_agnes-webfont.ttf') format('truetype');
 }
 
 .swag {
@@ -65,7 +65,7 @@ font-family: Imogen Agnes;
 
 @font-face {
 font-family: Imogen Agnes Swash;
-  src: url('../assets/fonts/imogen_agnes_swash-webfont.woff2') format('woff2');
+  src: url('../assets/fonts/imogen_agnes_swash-webfont.woff2') format('woff2'), url('../assets/fonts/imogen_agnes_swash-webfont.woff') format('woff'), url('../assets/fonts/imogen_agnes_swash-webfont.ttf') format('truetype');
 }
 
 .lit {
