@@ -105,7 +105,7 @@ font-family: Imogen Agnes Swash;
 }
 
 .menu-inner {
-  width: 150px;
+  width: 175px;
   .item {
     &:hover {
       background-color: #F9F9F9;
@@ -116,10 +116,36 @@ font-family: Imogen Agnes Swash;
   }
 }
 
-.no-scroll .scroll-content{
+.no-scroll .scroll-content {
   overflow: hidden;
 }
 
 .list-ios > .item-block:last-child {
   border-bottom: none;
+}
+
+.some {
+  /* position: absolute;
+  bottom: 10px;
+  width: 100%; */
+  border-top: 0.55px solid #c8c7cc;
+  padding-top: 16px;
+  a {
+    text-decoration: none;
+  }
+  .item-inner {
+    text-align: center;
+    .ion-logo-facebook {
+      /* color: #3b5998; */
+    }
+    .ion-logo-instagram {
+      /* color: #8a3ab9; */
+    }
+    .ion-logo-android {
+      /* color: #A4C639; */
+    }
+    .ion-logo-apple {
+      /* color: #8a3ab9; */
+    }
+  }
 }
