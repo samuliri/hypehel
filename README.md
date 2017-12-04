@@ -6,6 +6,7 @@
 
 - [Ionic 3](http://ionicframework.com/)
 - [Angular 5](https://angular.io)
+- [Firebase](https://firebase.google.com/)
 - [Node.js](https://nodejs.org/)
 - [Contentful](https://www.contentful.com/)
 - [Heroku](https://www.heroku.com/)

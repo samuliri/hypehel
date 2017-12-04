@@ -15,6 +15,19 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { ContentfulService } from '../services/contentful.service';
 import { MarkdownModule } from 'angular2-markdown';
+import { HttpModule } from '@angular/http';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
+import { AngularFireModule } from 'angularfire2';
+import { FirebaseProvider } from '../providers/firebase/firebase';
+
+var firebaseConfig = {
+  apiKey: "AIzaSyDMvG8QaR9Vg6RH8oibvzM5tsMZk4CKlyU",
+  authDomain: "hypehel-66939.firebaseapp.com",
+  databaseURL: "https://hypehel-66939.firebaseio.com",
+  projectId: "hypehel-66939",
+  storageBucket: "hypehel-66939.appspot.com",
+  messagingSenderId: "501749117975"
+};
 
 @NgModule({
   declarations: [
@@ -27,6 +40,9 @@ import { MarkdownModule } from 'angular2-markdown';
   ],
   imports: [
     BrowserModule,
+    HttpModule,
+    AngularFireDatabaseModule,
+    AngularFireModule.initializeApp(firebaseConfig),
     IonicModule.forRoot(HypeHEL),
     MarkdownModule.forRoot(),
     MatCardModule
@@ -44,7 +60,8 @@ import { MarkdownModule } from 'angular2-markdown';
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ContentfulService
+    ContentfulService,
+    FirebaseProvider
   ]
 })
 export class AppModule {}

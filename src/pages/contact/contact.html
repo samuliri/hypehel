@@ -9,5 +9,24 @@
 </ion-header>
 
 <ion-content>
-  Coming soon!
+  <h2 class="swag" style="text-align: center">Contact</h2>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label floating>Name</ion-label>
+        <ion-input type="text" [(ngModel)]="name"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Email</ion-label>
+        <ion-input type="text" [(ngModel)]="email"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating>Message</ion-label>
+        <ion-input type="text" [(ngModel)]="message"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <button ion-button (click)="addItem()">{{ btn }}</button>
+  </ion-row>
 </ion-content>

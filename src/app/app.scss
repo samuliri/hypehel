@@ -15,9 +15,9 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-.scroll-content {
-  // Can't remember what for is this hack
-  /* margin-top: 56px; */
+.ion-page .content .scroll-content {
+  margin-top: 49px !important;
+  margin-bottom: 49px !important;
 }
 
 .spinner {
@@ -122,8 +122,4 @@ font-family: Imogen Agnes Swash;
 
 .list-ios > .item-block:last-child {
   border-bottom: none;
-}
-
-.content .scroll-content {
-  margin-bottom: 50px !important;
 }
