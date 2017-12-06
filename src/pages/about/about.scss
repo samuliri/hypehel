@@ -2,6 +2,9 @@ page-about {
   h2 {
     padding-top: 30px;
     padding-bottom: 40px;
+    &.lit {
+      color: #AF9B62;
+    }
   }
   p {
     max-width: 400px;

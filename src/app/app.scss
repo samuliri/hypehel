@@ -16,8 +16,10 @@
 // automatically applied to the <body> element in the app.
 
 .ion-page .content .scroll-content {
-  margin-top: 49px !important;
+  margin-top: 0 !important;
   margin-bottom: 0 !important;
+  padding-top: 49px !important;
+  padding-bottom: 49px !important;
 }
 
 .spinner {
