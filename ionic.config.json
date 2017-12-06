@@ -1,6 +1,6 @@
 {
   "name": "HypeHEL",
-  "app_id": "",
+  "app_id": "b90a8b38",
   "type": "ionic-angular",
   "integrations": {
     "cordova": {}
