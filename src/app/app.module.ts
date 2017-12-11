@@ -9,6 +9,7 @@ import { ContactPage } from '../pages/contact/contact';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { ArticlePage } from '../pages/article/article';
+import { MapPage } from '../pages/map/map';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -19,6 +20,7 @@ import { HttpModule } from '@angular/http';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
 import { FirebaseProvider } from '../providers/firebase/firebase';
+import { GoogleMaps } from '@ionic-native/google-maps';
 
 var firebaseConfig = {
   apiKey: "AIzaSyDMvG8QaR9Vg6RH8oibvzM5tsMZk4CKlyU",
@@ -36,7 +38,8 @@ var firebaseConfig = {
     ContactPage,
     HomePage,
     TabsPage,
-    ArticlePage
+    ArticlePage,
+    MapPage
   ],
   imports: [
     BrowserModule,
@@ -54,14 +57,16 @@ var firebaseConfig = {
     ContactPage,
     HomePage,
     TabsPage,
-    ArticlePage
+    ArticlePage,
+    MapPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ContentfulService,
-    FirebaseProvider
+    FirebaseProvider,
+    GoogleMaps
   ]
 })
 export class AppModule {}

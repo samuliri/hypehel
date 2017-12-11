@@ -1,9 +1,13 @@
 <ion-header>
   <ion-navbar>
+    <button left class="map-btn bar-button-default-md" showWhen="android,ios" (click)="openMap($event, ' Helsinki')">
+      <ion-icon name="navigate"></ion-icon>
+      <div class="map-btn__text">Map</div>
+    </button>
+    <ion-title class="lit" style="text-align: center">THE HYPE OF HELSINKI</ion-title>
     <button ion-button menuToggle right>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title class="lit" style="text-align: center">THE HYPE OF HELSINKI</ion-title>
   </ion-navbar>
 </ion-header>
 

@@ -4,6 +4,7 @@ import { ContentfulService } from '../../services/contentful.service';
 import { Entry } from 'contentful';
 
 import { ArticlePage } from '../article/article';
+import { MapPage } from '../map/map';
 
 @Component({
   selector: 'page-home',
@@ -43,6 +44,12 @@ export class HomePage implements OnInit {
   itemTapped(event, item) {
     // That's right, we're pushing to ourselves!
     this.navCtrl.push(ArticlePage, {
+      item: item
+    });
+  }
+
+  openMap(event, item) {
+    this.navCtrl.push(MapPage, {
       item: item
     });
   }
