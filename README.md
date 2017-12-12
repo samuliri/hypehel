@@ -65,7 +65,7 @@ $ ionic cordova run ios
 
 ```bash
 # Build prod
-$ npm run prod
+$ npm run prod # If fail: https://github.com/dimpu/angular2-markdown/issues/102
 # Git add/commit/push
 $ git add .
 $ git commit -m "Commit message"
@@ -76,8 +76,9 @@ Every push to master will deploy a new production version of this Heroku app.
 ## TODO
 
 - [x] Angular 5
-- [ ] Google Maps API
+- [x] Google Maps API
 - [ ] Instagram API
+- [ ] Routing / Deeplinks
 
 ## License
 
