@@ -22,7 +22,7 @@
           <mat-card-subtitle>{{ article.fields.category.fields.name }}</mat-card-subtitle>
           <mat-card-subtitle Markdown>{{ article.fields.ingress }}</mat-card-subtitle>
         </mat-card-header>
-        <img *ngIf="article.fields.hero" mat-card-image src="{{ article.fields.hero.fields.file.url }}">
+        <img *ngIf="article.fields.hero" mat-card-image src="{{ article.fields.hero.fields.file.url }}?w=350">
         <mat-card-actions class="u-marginTopAuto">
           <button ion-item> Read more </button>
         </mat-card-actions>
