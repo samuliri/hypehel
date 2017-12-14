@@ -86,3 +86,10 @@ $colors: (
 
 @import "roboto";
 @import "noto-sans";
+
+// Breakpoints
+// --------------------------------------------------
+
+$phone: 340px;
+$tablet: 767px;
+$desktop: 1200px;

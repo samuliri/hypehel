@@ -1,13 +1,15 @@
 <ion-header>
   <ion-navbar>
-    <button left class="map-btn bar-button-default-md" showWhen="android,ios" (click)="openMap($event, ' Helsinki')">
-      <ion-icon name="navigate"></ion-icon>
-      <div class="map-btn__text">Map</div>
-    </button>
-    <ion-title class="lit" style="text-align: center">THE HYPE OF HELSINKI</ion-title>
-    <button ion-button menuToggle right>
+    <button ion-button menuToggle left>
       <ion-icon name="menu"></ion-icon>
     </button>
+    <ion-title class="lit" style="text-align: center">THE HYPE OF HELSINKI</ion-title>
+    <ion-buttons end>
+      <button class="map-btn bar-button-default-md" *ngIf="showSelected" (click)="openMap($event, ' Helsinki')">
+        <ion-icon name="navigate"></ion-icon>
+        <div class="map-btn__text">Map</div>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
@@ -19,7 +21,7 @@
       <mat-card class="article-card">
         <mat-card-header>
           <mat-card-title class="swag">{{ article.fields.heading }}</mat-card-title>
-          <mat-card-subtitle>{{ article.fields.category.fields.name }}</mat-card-subtitle>
+          <mat-card-subtitle><strong>{{ article.fields.category.fields.name }}</strong></mat-card-subtitle>
           <mat-card-subtitle Markdown>{{ article.fields.ingress }}</mat-card-subtitle>
         </mat-card-header>
         <img *ngIf="article.fields.hero" mat-card-image src="{{ article.fields.hero.fields.file.url }}?w=350">

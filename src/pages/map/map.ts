@@ -14,6 +14,7 @@ import {
 export class MapPage {
   markers: any;
   map: GoogleMap;
+  showSelected : boolean = true;
 
   constructor(public viewCtrl: ViewController, navParams: NavParams, googleMaps: GoogleMaps) {
     this.markers = navParams.get('item');
@@ -41,6 +42,7 @@ export class MapPage {
     // Wait the MAP_READY before using any methods.
     this.map.one(GoogleMapsEvent.MAP_READY)
     .then(() => {
+      this.showSelected = false;
       // Now you can use all methods safely.
       this.map.addMarker({
           title: this.markers,

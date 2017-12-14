@@ -1,32 +1,82 @@
 <!DOCTYPE html>
-<html lang=en dir=ltr>
+<html lang="en" dir="ltr">
 <head>
-<script data-ionic=inject>(function(w){var i=w.Ionic=w.Ionic||{};i.version='3.9.0';i.angular='5.0.0';i.staticDir='build/';})(window);</script>
-<meta charset=UTF-8>
-<title>HypeHEL</title>
-<meta name=description content="Hype of Helsinki. See, chill, eat, shop, discover Helsinki like never before.">
-<meta name=viewport content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name=format-detection content="telephone=no">
-<meta name=msapplication-tap-highlight content=no>
-<link rel=icon type=image/x-icon href=assets/icon/favicon.ico>
-<link rel=manifest href=manifest.json>
-<meta name=theme-color content=#AF9B62>
-<meta name=apple-mobile-web-app-capable content=yes>
-<meta name=apple-mobile-web-app-status-bar-style content=black>
-<script>(function(e,t,n,i,s,a,c){e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)};a=t.createElement(i);c=t.getElementsByTagName(i)[0];a.async=true;a.src=s;c.parentNode.insertBefore(a,c)})(window,document,"galite","script","https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js");galite('create','UA-80289891-2','auto');galite('send','pageview');</script>
-<script defer src=cordova.js></script>
-<script>if('serviceWorker'in navigator){navigator.serviceWorker.register('service-worker.js').then(()=>console.log('service worker installed')).catch(err=>console.error('Error',err));}</script>
+  <script data-ionic="inject">
+    (function(w){var i=w.Ionic=w.Ionic||{};i.version='3.9.0';i.angular='5.0.0';i.staticDir='build/';})(window);
+  </script>
+  <meta charset="UTF-8">
+  <title>HypeHEL</title>
+  <meta name="description" content="Hype of Helsinki. See, chill, eat, shop, discover Helsinki like never before.">
+  <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#AF9B62">
+
+  <!-- add to homescreen for ios -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <!-- ga-lite -->
+  <script>
+    (function(e,t,n,i,s,a,c){e[n]=e[n]||function(){(e[n].q=e[n].q||[]).push(arguments)}
+    ;a=t.createElement(i);c=t.getElementsByTagName(i)[0];a.async=true;a.src=s
+    ;c.parentNode.insertBefore(a,c)
+    })(window,document,"galite","script","https://cdn.jsdelivr.net/npm/ga-lite@2/dist/ga-lite.min.js");
+
+    galite('create', 'UA-80289891-2', 'auto');
+    galite('send', 'pageview');
+  </script>
+
+  <!-- cordova.js required for cordova apps -->
+  <script defer src="cordova.js"></script>
+
+  <!-- enable service worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(() => console.log('service worker installed'))
+        .catch(err => console.error('Error', err));
+    }
+  </script>
+
 </head>
 <body>
-<noscript id=deferred-styles>
-<link rel=stylesheet type=text/css href="build/main.css"/>
-<h3 style=text-align:center>🔥</h3>
-</noscript>
-<script>var loadDeferredStyles=function(){var addStylesNode=document.getElementById("deferred-styles");var replacement=document.createElement("div");replacement.innerHTML=addStylesNode.textContent;document.body.appendChild(replacement)
-addStylesNode.parentElement.removeChild(addStylesNode);};var raf=requestAnimationFrame||mozRequestAnimationFrame||webkitRequestAnimationFrame||msRequestAnimationFrame;if(raf)raf(function(){window.setTimeout(loadDeferredStyles,0);});else window.addEventListener('load',loadDeferredStyles);</script>
-<ion-app><div class=spinner></div></ion-app>
-<script defer src=build/polyfills.js></script>
-<script defer src=build/vendor.js></script>
-<script defer src=build/main.js></script>
+
+  <!-- https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery -->
+  <noscript id="deferred-styles">
+    <link rel="stylesheet" type="text/css" href="build/main.css"/>
+    <h3 style="text-align: center;">🔥</h3>
+  </noscript>
+
+  <script>
+    var loadDeferredStyles = function() {
+      var addStylesNode = document.getElementById("deferred-styles");
+      var replacement = document.createElement("div");
+      replacement.innerHTML = addStylesNode.textContent;
+      document.body.appendChild(replacement)
+      addStylesNode.parentElement.removeChild(addStylesNode);
+    };
+    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
+        webkitRequestAnimationFrame || msRequestAnimationFrame;
+    if (raf) raf(function() { window.setTimeout(loadDeferredStyles, 0); });
+    else window.addEventListener('load', loadDeferredStyles);
+  </script>
+
+  <!-- Ionic's root component and where the app will load -->
+  <ion-app><div class="spinner"></div></ion-app>
+
+  <!-- The polyfills js is generated during the build process -->
+  <script defer src="build/polyfills.js"></script>
+
+  <!-- The vendor js is generated during the build process
+       It contains all of the dependencies in node_modules -->
+  <script defer src="build/vendor.js"></script>
+
+  <!-- The main bundle js is generated during the build process -->
+  <script defer src="build/main.js"></script>
+
 </body>
 </html>

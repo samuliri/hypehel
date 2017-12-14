@@ -53,10 +53,12 @@ page-home {
 
   .article {
     transition: 0.4s;
+    @media (min-width: $desktop) {
       &:hover {
         background-color: #F9F9F9;
         margin: -5px;
       }
+    }
   }
 
   .article-card {
@@ -68,7 +70,7 @@ page-home {
       margin: 10px auto;
       text-align: center;
       .mat-card-title {
-        margin-bottom: 32px;
+        margin-bottom: 36px;
       }
     }
     .mat-card-subtitle {

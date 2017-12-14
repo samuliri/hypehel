@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, Platform } from 'ionic-angular';
 import { ContentfulService } from '../../services/contentful.service';
 import { Entry } from 'contentful';
 
@@ -13,8 +13,9 @@ import { MapPage } from '../map/map';
 export class HomePage implements OnInit {
   articles: Entry<any>[];
   tabTitle: any;
+  showSelected : boolean = false;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private contentfulService: ContentfulService) {
+  constructor(public navCtrl: NavController, public navParams: NavParams, private contentfulService: ContentfulService, public platform: Platform) {
     this.tabTitle = navCtrl['tabTitle'];
   }
 
@@ -38,6 +39,10 @@ export class HomePage implements OnInit {
     } else if (this.tabTitle == "Art") {
       this.contentfulService.getArticles(({'fields.category.sys.id': '25myJzzEPyEeUckoeoWsYQ'}))
       .then(articles => this.articles = articles)
+    }
+    
+    if (this.platform.is('cordova')) {
+      this.showSelected = true;
     }
   }
 
