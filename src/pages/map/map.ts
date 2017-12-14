@@ -30,9 +30,9 @@ export class MapPage {
       camera: {
         target: {
           lat: 60.1690059,
-          lng: 24.950076800000033
+          lng: 24.940076800000033
         },
-        zoom: 18,
+        zoom: 13,
         tilt: 30
       }
     };
@@ -44,21 +44,20 @@ export class MapPage {
     .then(() => {
       this.showSelected = false;
       // Now you can use all methods safely.
-      this.map.addMarker({
-          title: this.markers,
-          icon: 'blue',
-          animation: 'DROP',
-          position: {
-            lat: 60.1690059,
-            lng: 24.950076800000033
-          }
-        })
-        .then(marker => {
-          marker.on(GoogleMapsEvent.MARKER_CLICK)
-            .subscribe(() => {
-              //alert(this.markers);
-            });
-        });
+      for(let i = 0 ; i < this.markers.length ; i++ ) {
+        let obj = this.markers[i];
+        if(obj.fields.location) {
+          this.map.addMarker({
+            title: " " + obj.fields.heading,
+            icon: 'blue',
+            animation: 'DROP',
+            position: {
+              lat: obj.fields.location.lat,
+              lng: obj.fields.location.lon
+            }
+          });
+        }
+      }
     });
   }
 }
