@@ -35,13 +35,17 @@ page-article {
     .mat-card-header-text {
       margin: auto;
       .mat-card-title {
-        margin-bottom: 36px;
+        margin-bottom: 40px;
       }
     }
     .body {
       max-width: 400px;
       margin: 16px auto;
       padding: 0 16px;
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
     }
   }
 }
