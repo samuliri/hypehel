@@ -40,16 +40,18 @@ export class HomePage implements OnInit {
       this.contentfulService.getArticles(({'fields.category.sys.id': '25myJzzEPyEeUckoeoWsYQ'}))
       .then(articles => this.articles = articles)
     }
-    
+
     if (this.platform.is('cordova')) {
       this.showSelected = true;
     }
   }
 
   itemTapped(event, item) {
+    let slug = this.slugify(item.fields.heading);
     // That's right, we're pushing to ourselves!
     this.navCtrl.push(ArticlePage, {
-      item: item
+      item: item,
+      slug: slug
     });
   }
 
@@ -57,6 +59,17 @@ export class HomePage implements OnInit {
     this.navCtrl.push(MapPage, {
       item: item
     });
+  }
+
+  slugify(text) {
+    if(text) {
+      return text.toString().toLowerCase()
+        .replace(/\s+/g, '-')           // Replace spaces with -
+        .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
+        .replace(/\-\-+/g, '-')         // Replace multiple - with single -
+        .replace(/^-+/, '')             // Trim - from start of text
+        .replace(/-+$/, '');            // Trim - from end of text
+    }
   }
 
 }

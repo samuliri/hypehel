@@ -46,7 +46,12 @@ var firebaseConfig = {
     HttpModule,
     AngularFireDatabaseModule,
     AngularFireModule.initializeApp(firebaseConfig),
-    IonicModule.forRoot(HypeHEL),
+    IonicModule.forRoot(HypeHEL, {}, {
+        links: [
+          { component: HomePage, segment: 'home', name: 'Home' },
+          { component: ArticlePage, segment: 'article/:slug', name: 'Article' },
+        ]
+      }),
     MarkdownModule.forRoot(),
     MatCardModule
   ],
