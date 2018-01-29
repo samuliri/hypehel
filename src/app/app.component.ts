@@ -27,7 +27,6 @@ export class HypeHEL {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: '🔥 Home', component: TabsPage },
       { title: '💯 About', component: AboutPage },
       { title: '🔫 Contact', component: ContactPage }
     ];
@@ -39,7 +38,7 @@ export class HypeHEL {
     //this.nav.setRoot(page.component);
 
     this.nav.push(page.component);
-    
+
     //this.app.getActiveNavs().push(page.component);
   }
 }

@@ -48,7 +48,10 @@ var firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     IonicModule.forRoot(HypeHEL, {}, {
         links: [
+          { component: TabsPage, segment: 'root', name: 'Tabs' },
+          { component: AboutPage, segment: 'about', name: 'About' },
           { component: HomePage, segment: 'home', name: 'Home' },
+          { component: ContactPage, segment: 'contact', name: 'Contact' },
           { component: ArticlePage, segment: 'article/:slug', name: 'Article' },
         ]
       }),
