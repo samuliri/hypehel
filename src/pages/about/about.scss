@@ -1,20 +1,33 @@
 page-about {
   h2 {
-    padding-top: 30px;
+    padding-top: 40px;
     padding-bottom: 40px;
     &.lit {
       color: #AF9B62;
+      padding-top: 30px;
+      padding-bottom: 0px;
     }
   }
   p {
-    max-width: 400px;
+    max-width: 350px;
     margin: 30px auto;
-    padding: 0 16px;
+    padding: 16px 16px;
     text-align: justify;
     font-size: 1.7rem;
     line-height: 1.6;
+    background: rgba(255, 255, 255, 0.8);
+    width: 90%;
+    margin: auto;
   }
-  .fixed-content {
-    background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+  .fixed-content::after {
+    content: "";
+    background: url(/assets/image/about-min.jpeg) no-repeat center center fixed;
+    background-size: cover;
+    opacity: 0.2;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
   }
 }
