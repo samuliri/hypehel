@@ -66,8 +66,12 @@ page-home {
     display: flex;
     flex-direction: column;
     cursor: pointer;
-    .mat-card-header-text{
+    &.mat-card {
+      padding: 24px 0;
+    }
+    .mat-card-header-text {
       margin: 10px auto;
+      padding: 0 16px;
       text-align: center;
       .mat-card-title {
         margin-bottom: 40px;
@@ -77,8 +81,12 @@ page-home {
       text-align: center;
     }
     .mat-card-actions {
+      padding: 10px 20px;
       .item {
-      background-color: transparent;
+        background-color: transparent;
+        &.item-ios {
+          padding-left: 32px;
+        }
         .item-inner {
           border-bottom: none;
           .label {
