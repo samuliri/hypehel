@@ -2,8 +2,15 @@ page-contact {
   h2 {
     padding-top: 40px;
   }
+  .header-md {
+    .logo.swag {
+      div {
+        margin-left: -30px;
+      }
+    }
+  }
   .button {
-    margin: 50px auto 30px auto;
+    margin: 30px auto 25px auto;
   }
   .row {
     width: 90%;
@@ -13,6 +20,7 @@ page-contact {
     margin: 30px auto;
     max-width: 600px;
     background: rgba(255, 255, 255, 0.8);
+    border-radius: 5px;
     .item {
       padding-right: 16px;
       background: rgba(255, 255, 255, 0.1);

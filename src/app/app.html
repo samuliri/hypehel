@@ -7,11 +7,11 @@
 
   <ion-content class="no-scroll">
     <ion-list class="navi">
-      <a href="#/root/all/home">
-        <button menuClose ion-item>
+      <!--a href="#/root/all/home">
+        <button menuClose ion-item (click)="openPage(p)">
           🔥 Home
         </button>
-      </a>
+      </a-->
       <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
         {{p.title}}
       </button>

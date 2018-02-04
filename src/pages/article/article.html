@@ -1,7 +1,6 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-    </ion-title>
+    <ion-title class="logo swag" style="text-align: center"><a href="#/root/all/home">hypehel</a></ion-title>
     <ion-buttons end>
       <button class="map-btn bar-button-default-md" *ngIf="selectedArticle.fields.location;">
         <a href="https://maps.google.com/maps?q=@{{ selectedArticle.fields.location.lat }},{{ selectedArticle.fields.location.lon }}" target="_blank">

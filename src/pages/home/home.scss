@@ -6,7 +6,7 @@ page-home {
       content: "";
       background: url(/assets/image/feed-min.jpeg) no-repeat center center fixed;
       background-size: cover;
-      opacity: 0.1;
+      opacity: 0.2;
       top: 0;
       left: 0;
       bottom: 0;
@@ -17,6 +17,14 @@ page-home {
 
   h2 {
     text-align: center;
+  }
+
+  .header-md {
+    .logo.swag {
+      div {
+        margin-left: -10px;
+      }
+    }
   }
 
   .map-btn {
@@ -67,7 +75,7 @@ page-home {
     @media (min-width: $desktop) {
       &:hover {
         background-color: #F9F9F9;
-        margin: -5px;
+        margin: -3px;
       }
     }
   }
@@ -105,9 +113,9 @@ page-home {
       position: absolute;
       top: 0%;
       left: 0%;
-      width: calc(100% + 20px);
+      width: calc(100% + 30px);
       height: calc(100% - 3px);
-      box-shadow: -10px 0 8px 8px white inset;
+      box-shadow: -15px 0 8px 8px white inset;
     }
     .mat-card-actions {
       padding: 10px 20px;

@@ -122,6 +122,10 @@
   overflow: hidden;
 }
 
+.list-ios > .item-block:first-child {
+  border-top: none;
+}
+
 .list-ios > .item-block:last-child {
   border-bottom: none;
 }
@@ -129,6 +133,10 @@
 .navi {
   a {
     text-decoration: none;
+  }
+  &.list {
+    padding: 15px 0;
+    margin: 0;
   }
 }
 
@@ -156,4 +164,29 @@
       /* color: #8a3ab9; */
     }
   }
+}
+
+.logo.swag {
+  a {
+    color: #AF9B62;
+    font-size: 5rem;
+    font-weight: normal;
+    text-decoration: none;
+    height: 30px;
+  }
+}
+
+.show-menu {
+  .close-btn {
+    -webkit-animation: spin 0.3s linear;
+  }
+}
+
+@-webkit-keyframes spin {
+  0%  {-webkit-transform: rotate(0deg);}
+  100% {-webkit-transform: rotate(180deg);}
+}
+
+.bar-buttons-md {
+  min-width: 56px;
 }
