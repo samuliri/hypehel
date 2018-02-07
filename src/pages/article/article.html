@@ -2,8 +2,8 @@
   <ion-navbar>
     <ion-title class="logo swag" style="text-align: center"><a href="#/root/all/home">hypehel</a></ion-title>
     <ion-buttons end>
-      <button class="map-btn bar-button-default-md" *ngIf="selectedArticle.fields.location;">
-        <a href="https://maps.google.com/maps?q=@{{ selectedArticle.fields.location.lat }},{{ selectedArticle.fields.location.lon }}" target="_blank">
+      <button class="map-btn bar-button-default-md" *ngIf="selectedArticle?.fields.location;">
+        <a href="https://maps.google.com/maps?q=@{{ selectedArticle?.fields.location.lat }},{{ selectedArticle?.fields.location.lon }}" target="_blank">
           <ion-icon name="navigate"></ion-icon>
           <div class="map-btn__text">Map</div>
         </a>
@@ -15,23 +15,23 @@
 <ion-content>
   <mat-card class="article-card">
     <mat-card-header>
-      <mat-card-title class="swag">{{ selectedArticle.fields.heading }}</mat-card-title>
-      <mat-card-subtitle><strong>{{ selectedArticle.fields.category.fields.name }}</strong></mat-card-subtitle>
-      <mat-card-subtitle class="body" Markdown>{{ selectedArticle.fields.ingress }}</mat-card-subtitle>
+      <mat-card-title class="swag">{{ selectedArticle?.fields.heading }}</mat-card-title>
+      <mat-card-subtitle><strong>{{ selectedArticle?.fields.category.fields.name }}</strong></mat-card-subtitle>
+      <mat-card-subtitle class="body" Markdown>{{ selectedArticle?.fields.ingress }}</mat-card-subtitle>
     </mat-card-header>
     <mat-card-content>
-      <img *ngIf="selectedArticle.fields.hero" src="{{ selectedArticle.fields.hero.fields.file.url }}?w=500">
-      <div class="body" Markdown>{{ selectedArticle.fields.body }}</div>
+      <img *ngIf="selectedArticle?.fields.hero" src="{{ selectedArticle?.fields.hero.fields.file.url }}?w=500">
+      <div class="body" Markdown>{{ selectedArticle?.fields.body }}</div>
     </mat-card-content>
     <mat-card-footer>
-      <div class="body" Markdown>{{ selectedArticle.fields.hours }}</div>
+      <div class="body" Markdown>{{ selectedArticle?.fields.hours }}</div>
       <!--span *ngIf="selectedArticle.fields.instagram;">
         <a href="https://www.instagram.com/{{ selectedArticle.fields.instagram }}">
           <ion-icon name="logo-instagram"></ion-icon>
         </a>
       </span-->
-      <div class="body" *ngIf="selectedArticle.fields.instagram;"><a href="https://www.instagram.com/{{ selectedArticle.fields.instagram }}" target="_blank">@{{ selectedArticle.fields.instagram }}</a></div>
-      <a href="{{ selectedArticle.fields.website }}" target="_blank">{{ selectedArticle.fields.website }}</a>
+      <div class="body" *ngIf="selectedArticle?.fields.instagram;"><a href="https://www.instagram.com/{{ selectedArticle?.fields.instagram }}" target="_blank">@{{ selectedArticle?.fields.instagram }}</a></div>
+      <a href="{{ selectedArticle?.fields.website }}" target="_blank">{{ selectedArticle?.fields.website }}</a>
     </mat-card-footer>
   </mat-card>
 </ion-content>

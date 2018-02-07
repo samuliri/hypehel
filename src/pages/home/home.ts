@@ -47,11 +47,10 @@ export class HomePage implements OnInit {
   }
 
   itemTapped(event, item) {
-    let slug = this.slugify(item.fields.heading);
     // That's right, we're pushing to ourselves!
     this.navCtrl.push(ArticlePage, {
       item: item,
-      slug: slug
+      slug: item.fields.slug
     });
   }
 
@@ -59,17 +58,6 @@ export class HomePage implements OnInit {
     this.navCtrl.push(MapPage, {
       item: item
     });
-  }
-
-  slugify(text) {
-    if(text) {
-      return text.toString().toLowerCase()
-        .replace(/\s+/g, '-')           // Replace spaces with -
-        .replace(/[^\w\-]+/g, '')       // Remove all non-word chars
-        .replace(/\-\-+/g, '-')         // Replace multiple - with single -
-        .replace(/^-+/, '')             // Trim - from start of text
-        .replace(/-+$/, '');            // Trim - from end of text
-    }
   }
 
 }

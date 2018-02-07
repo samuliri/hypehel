@@ -48,7 +48,7 @@ export class ContentfulService {
       })
   }
 
-  // fetch products
+  // fetch articles
   getArticles(query?: object): Promise<Entry<any>[]> {
     return this.cdaClient.getEntries(Object.assign({
       content_type: DEFAULT_CONFIG.contentTypeIds.article
@@ -56,7 +56,7 @@ export class ContentfulService {
     .then(res => res.items);
   }
 
-  // fetch products with a given slug
+  // fetch article with a given slug
   // and return one of them
   getArticle(slug: string): Promise<Entry<any>> {
     return this.getArticles({ 'fields.slug': slug })
