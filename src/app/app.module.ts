@@ -21,6 +21,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireModule } from 'angularfire2';
 import { FirebaseProvider } from '../providers/firebase/firebase';
 import { GoogleMaps } from '@ionic-native/google-maps';
+import { Geolocation } from '@ionic-native/geolocation';
 
 var firebaseConfig = {
   apiKey: "AIzaSyDMvG8QaR9Vg6RH8oibvzM5tsMZk4CKlyU",
@@ -74,7 +75,8 @@ var firebaseConfig = {
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ContentfulService,
     FirebaseProvider,
-    GoogleMaps
+    GoogleMaps,
+    Geolocation
   ]
 })
 export class AppModule {}
