@@ -77,8 +77,8 @@ Every push to master will deploy a new production version of this Heroku app.
 
 - [x] Angular 5
 - [x] Google Maps API
-- [ ] Instagram API
-- [ ] Routing / Deeplinks
+- [x] Routing / Deeplinks
+- [ ] Push Notifications
 
 ## License
 
