@@ -27,7 +27,7 @@ page-about {
       }
     }
   }
-  .fixed-content::after {
+  .fixed-content {
     content: "";
     background: url(/assets/image/about-min.jpeg) no-repeat center center fixed;
     background-size: cover;

@@ -15,6 +15,10 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
+body {
+  visibility: visible;
+}
+
 .ion-page .content .scroll-content {
   margin-top: 0 !important;
   margin-bottom: 0 !important;
@@ -189,4 +193,8 @@
 
 .bar-buttons-md {
   min-width: 56px;
+}
+
+.toolbar-title {
+  overflow: visible;
 }

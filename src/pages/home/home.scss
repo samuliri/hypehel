@@ -2,7 +2,7 @@ page-home {
 
   ion-content {
     /* background-image: linear-gradient(180deg,transparent,rgba(1,1,1,.5)); */
-    .fixed-content::after {
+    .fixed-content {
       content: "";
       background: url(/assets/image/feed-min.jpeg) no-repeat center center fixed;
       background-size: cover;
