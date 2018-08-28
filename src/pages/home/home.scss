@@ -71,12 +71,16 @@ page-home {
   }
 
   .article {
-    transition: 0.4s;
+    transition: 0.3s;
     @media (min-width: $desktop) {
       &:hover {
         background-color: #F9F9F9;
         margin: -3px;
       }
+    }
+
+    &.true {
+      box-shadow: 0 0 50px #AF9B62;
     }
   }
 
