@@ -15,14 +15,19 @@ export class ContactPage {
   constructor(public navCtrl: NavController, public firebaseProvider: FirebaseProvider) { }
 
   addItem() {
-    if (this.name != '' && this.email != '' && this.message != '') {
+    /* if (this.name != '' && this.email != '' && this.message != '') {
       this.firebaseProvider.addItem(this.name +', '+ this.email +', '+ this.message);
       this.name = '';
       this.email = '';
       this.message = '';
       this.btn = 'Thanks';
+    } */
+    if (this.message != '') {
+      this.firebaseProvider.addItem(this.message);
+      this.message = '';
+      this.btn = 'Thanks';
     } else {
-      this.btn = 'Send (All fields required)';
+      this.btn = 'Send (Message required)';
     }
   }
 

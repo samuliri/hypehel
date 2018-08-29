@@ -11,17 +11,17 @@
   <h2 class="swag" style="text-align: center">Contact</h2>
   <ion-row>
     <ion-col>
-      <ion-item>
+      <!--ion-item>
         <ion-label floating>Name</ion-label>
         <ion-input type="text" [(ngModel)]="name"></ion-input>
-      </ion-item>
-      <ion-item>
+      </ion-item-->
+      <!--ion-item>
         <ion-label floating>Email</ion-label>
         <ion-input type="email" [(ngModel)]="email"></ion-input>
-      </ion-item>
+      </ion-item-->
       <ion-item>
         <ion-label floating>Message</ion-label>
-        <ion-input type="text" [(ngModel)]="message"></ion-input>
+        <ion-textarea [(ngModel)]="message"></ion-textarea>
       </ion-item>
       <ion-row>
         <button ion-button (click)="addItem()">{{ btn }}</button>
