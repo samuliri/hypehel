@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="hypehel" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget id="hypehel" version="1.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
     <name>HypeHEL</name>
     <description>Discover Helsinki like never before.</description>
-    <author email="samuli_risti@hotmail.com" href="http://samuli.webflow.io/">Samuli Ristimäki</author>
+    <author email="samuli_risti@hotmail.com" href="https://samuliristimaki.life/">Samuli Ristimäki</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />

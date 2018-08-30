@@ -1,6 +1,6 @@
 {
   "name": "HypeHEL",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Discover Helsinki like never before.",
   "homepage": "http://hypehel.com/",
   "main": "index.js",
@@ -34,6 +34,7 @@
     "angularfire2": "^5.0.0-rc.5-next",
     "compression": "^1.7.3",
     "contentful": "^5.1.3",
+    "cordova-android": "7.0.0",
     "cordova-ios": "4.5.4",
     "cordova-plugin-device": "^1.1.7",
     "cordova-plugin-geolocation": "^4.0.1",

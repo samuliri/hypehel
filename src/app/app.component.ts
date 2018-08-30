@@ -17,12 +17,18 @@ export class HypeHEL {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
+  showSelected : boolean = false;
+
+  constructor(public platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
       statusBar.styleDefault();
       splashScreen.hide();
+
+      if (!this.platform.is('cordova')) {
+        this.showSelected = true;
+      }
     });
 
     // used for an example of ngFor and navigation

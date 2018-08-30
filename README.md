@@ -73,6 +73,14 @@ $ git push
 ```
 Every push to master will deploy a new production version of this Heroku app.
 
+## Update
+
+```bash
+$ npm run prod
+$ ionic cordova build ios --prod --release
+$ ionic cordova build android --prod --release
+```
+
 ## TODO
 
 - [x] Angular 5
