@@ -1,6 +1,6 @@
 import { FirebaseProvider } from './../../providers/firebase/firebase';
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, Platform } from 'ionic-angular';
 
 @Component({
   selector: 'page-contact',
@@ -11,8 +11,15 @@ export class ContactPage {
   email = '';
   message = '';
   btn = 'Send';
+  showSelected : boolean = false;
 
-  constructor(public navCtrl: NavController, public firebaseProvider: FirebaseProvider) { }
+  constructor(public navCtrl: NavController, public firebaseProvider: FirebaseProvider, public platform: Platform) {}
+
+  ngOnInit() {
+    if (!this.platform.is('cordova')) {
+      this.showSelected = true;
+    }
+  }
 
   addItem() {
     /* if (this.name != '' && this.email != '' && this.message != '') {
