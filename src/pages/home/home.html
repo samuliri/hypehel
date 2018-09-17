@@ -15,11 +15,31 @@
 
 <ion-content padding>
   <ul class="u-listReset article-grid">
+
     <li class="u-marginBottom" *ngFor="let article of articles">
       <!--pre>{{article | json}}</pre-->
-      <div class="article {{ article.fields.pickOfTheWeek }}" (click)="itemTapped($event, article)">
+      <div *ngIf="article.fields.pickOfTheWeek" class="article {{ article.fields.pickOfTheWeek }}" (click)="itemTapped($event, article)">
         <mat-card class="article-card">
           <mat-card-title *ngIf="article.fields.pickOfTheWeek" class="swag pick">Pick of the week</mat-card-title>
+          <mat-card-header>
+            <mat-card-title class="swag">{{ article.fields.heading }}</mat-card-title>
+            <mat-card-subtitle><strong>{{ article.fields.category.fields.name }}</strong></mat-card-subtitle>
+            <mat-card-subtitle Markdown>{{ article.fields.ingress }}</mat-card-subtitle>
+          </mat-card-header>
+          <div class="image-container">
+            <img *ngIf="article.fields.hero" mat-card-image src="{{ article.fields.hero.fields.file.url }}?w=375">
+          </div>
+          <mat-card-actions class="u-marginTopAuto">
+            <button ion-item> Read more </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </li>
+
+    <li class="u-marginBottom" *ngFor="let article of articles">
+      <!--pre>{{article | json}}</pre-->
+      <div *ngIf="!article.fields.pickOfTheWeek" class="article" (click)="itemTapped($event, article)">
+        <mat-card class="article-card">
           <mat-card-header>
             <mat-card-title class="swag">{{ article.fields.heading }}</mat-card-title>
             <mat-card-subtitle><strong>{{ article.fields.category.fields.name }}</strong></mat-card-subtitle>

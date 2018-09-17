@@ -65,17 +65,19 @@ page-home {
 
   .article-grid > * {
     flex: 0 1 auto;
-    margin: 0.5em 0;
     width: 100%;
     max-width: 37.5em;
   }
 
   .article {
     transition: 0.3s;
+    margin: 0.5em 0;
+
     @media (min-width: $desktop) {
       &:hover {
         background-color: #F9F9F9;
-        margin: -3px;
+        margin: 0.4em -0.4em;
+        box-shadow: 0 0 50px rgb(150, 150, 150);
       }
     }
 
